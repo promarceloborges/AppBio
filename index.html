@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Biologia | Profº Marcelo Borges</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quiz de Biologia | Profº Marcelo Borges</h1>
+    </header>
+
+    <main>
+        <div id="menu">
+            <h2>Escolha um tema</h2>
+            <button class="tema" onclick="iniciarQuiz('organizacao')">Níveis de organização biológica</button>
+            <button class="tema" onclick="iniciarQuiz('celulas')">Tipos celulares</button>
+            <button class="tema" onclick="iniciarQuiz('sistemas')">Sistemas respiratório, digestório e cardiovascular</button>
+            <button class="tema" onclick="iniciarQuiz('origem')">Origem da vida e teorias associadas</button>
+            <button class="tema" onclick="iniciarQuiz('abiogenese')">Abiogênese e biogênese</button>
+            <button class="tema" onclick="iniciarQuiz('conhecimento')">Construção do conhecimento científico</button>
+            <button class="tema" onclick="iniciarQuiz('genetica')">Noções de Genética</button>
+        </div>
+
+        <div id="quiz" style="display: none;">
+            <h2 id="pergunta"></h2>
+            <div id="opcoes"></div>
+            <p id="tempo"></p>
+            <button onclick="proximaPergunta()">Próxima</button>
+        </div>
+
+        <div id="resultado" style="display: none;">
+            <h2>Quiz concluído!</h2>
+            <p id="pontuacao"></p>
+            <button onclick="reiniciarQuiz()">Voltar ao Menu</button>
+            <button onclick="compartilhar()">Compartilhar Resultado</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
